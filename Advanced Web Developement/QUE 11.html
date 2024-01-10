@@ -1,0 +1,123 @@
+<!--
+
+NAME : SHAH KRISH J.
+ROLL NO. : 47
+SEM : II
+YEAR : 1
+COURSE : COMPUTER SCIENCE
+SUBJECT : FRONT END WEB DEVELOPMENT
+ASSIGNMENT - 2
+
+
+	QUESTION : 11
+	
+Write down jQuery to traverse html elements through the DOM 
+(Document Object Model) to display it on web page. 
+[Utilize DOM Traversing parent, child, and siblings’ methods.] -->
+<html>
+<head>
+<title>
+Question 11 By KRISH 47
+</title>
+<style>
+html{
+	border : 5px solid red;
+}
+head,body{
+	border : 4px solid blue;
+}
+style,script,title{
+	border : 3px dashed green;
+}
+div,p,h1,h2,h3{
+	padding : 10px;
+	margin : 12px;
+	border : 3px dashed pink;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+</script>
+<script>
+
+// traversing using ancestors
+
+$(document).ready(function(){
+	$("p").parents().css("background-color","yellow");
+});
+
+$(document).ready(function(){
+	$("p").parentsUntil("body").css("background-color","#2398cb");
+});
+
+$(document).ready(function(){
+	$("p").parent().css("background-color","#aaafff");
+});
+
+// traversing using descendants
+
+$(document).ready(function(){
+	$("div.sub").children().css({
+		"font-family":"Arial",
+		"text-align":"center"
+	});
+});
+
+$(document).ready(function(){
+  $("div.big").find("p").css({
+		"color":"green",
+		"font-family":"Script MT Bold"
+	});
+});
+
+// traversing using siblings’
+
+$(document).ready(function(){
+	$("h1").siblings().css("text-align","right");
+});
+
+$(document).ready(function(){
+	$("h2").nextUntil("div.sub").css("color","violet");
+});
+
+$(document).ready(function(){
+	$("p").prevUntil("div.big").css("background-color","grey");
+});
+
+$(document).ready(function(){
+  $("h2").nextAll().css("border","2px solid red");
+});
+
+$(document).ready(function(){
+  $("div.sub").prevAll().css("border","2px dashed blue");
+});
+
+$(document).ready(function(){
+  $("h2").next("h3").css("border","4px solid yellow");
+});
+
+$(document).ready(function(){
+  $("h5").prev("h4").css("border","2px dashed black");
+});
+</script>
+</head>
+<body>
+<div class="big">
+<h1>This Is H1</h1>
+<h2>This Is H2</h2>
+<h3>This Is H3</h3>
+<div class="sub">
+<h4>This Is Content In DIV</h4>
+<h5>This Is Content In DIV</h5>
+<h6>This Is Content In DIV</h6>
+<p>This Is Paragraph</p>
+</div>
+</div>
+* FOR MORE UNDERSTANDING PURPOSE YOU SHOULD TRY 
+ONE BY ONE ANCESTOR , DESCENDANTS AND AFTER THAT 
+ONE BY ONE ALL SIBLINGS.
+<br>YOU CAN UNDERSTAND ALL ANCESTOR AND DESCENDANTS 
+AT ONE TRY BUT HARD TO DO IT WITH SIBLINGS.
+<br>AND AFTER UNDERSTANDING ANCESTOR YOU SHOULD COMMENT IT
+<br>AFTER THAT UNDERSTANDING DESENDANTS YOU SHOULD COMMENT IT
+</body>
+</html>

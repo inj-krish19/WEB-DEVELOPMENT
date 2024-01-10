@@ -1,0 +1,139 @@
+<!--
+
+NAME : SHAH KRISH J.
+ROLL NO. : 47
+SEM : II
+YEAR : 1
+COURSE : COMPUTER SCIENCE
+SUBJECT : FRONT END WEB DEVELOPMENT
+ASSIGNMENT - 2
+
+
+	QUESTION : 9
+	
+Design web page for Computer Science department of Gujarat University 
+using Flex grid. Configure various properties of flex container and flex 
+items. Consider the services and resources at department as flex items	-->
+<html>
+<head>
+<title>
+Question 9 By KRISH 47
+</title>
+<style>
+.flex-container{
+	display: flex;
+	height : 1000px;
+	width : 700px;
+	padding : 20px;
+	margin : 10px;
+	border : 3px solid lightblue;
+	flex-direction : column;
+	flex-wrap : wrap;
+	justify-content : center;
+	align-items : flex-start;
+	overflow : hidden;
+	background-color : #aaafff;
+	animation : pc 10s 1 alternate;
+}
+.sub{
+	display : block;
+	margin : 10px;
+	border : 3px solid green;
+	height : 250px;
+	width : 250px;
+	background-color : #23bbbb; 
+	overflow : hidden;
+	word-break : keep-all;
+	writing-mode: horizontal-tb;
+	text-overflow : ellipsis;
+}
+h2{
+	text-align : center;
+	color : white;
+	font-family : Arial;
+}
+h1{
+	text-align : center;
+	color : orange;
+	font-family : Bahnscrift;
+}
+p{
+	padding : 2px;
+	text-align : left;
+	color : #890ab1;
+	font-family : Script MT Bold;
+	font-size : 20;
+}
+#dark:active{
+  background-color : #252525;
+}
+.pc:active{
+  background-color : #252525;
+}
+@keyframes bodyy{
+	0%{background-color : #f0f0f0;}
+	100%{background-color : #252525;}
+}
+body{
+	animation : bodyy 10s infinite;
+}
+@keyframes pc{
+	0%{height : 1000px; width : 700px;}
+	100%{height : 700px; width : 1000px;}
+}
+</style>
+<script>
+</script>
+</head>
+<body>
+<h1>Department Of Computer Science</h1>
+<div class="flex-container">
+<div class="sub">
+<h2>About Us</h2>
+<p>This Is an Official Webpage Of Department Of Computer Science that was at 
+Ahmedabad, Gujarat. That was a part of Gujarat University. 
+Department Of Computer Science Have Courses like M.Tech, MCA, CS, AI&ML.
+We have different fees for course it accordingly.</p>
+</div>
+<div class="sub">
+<h2>Services</h2>
+<p>Our Department provide services like Hostel,
+Some Scholarships, Free-ship card etc.. and PM Yojana also.
+Our Department 's hostel also provide meal to our students.
+We have three computer labs also for student use.
+</p>
+</div>
+<div class="sub">
+<h2>Resources</h2>
+<p>In Our there are some cultural activities and some sports and esport event also.
+Because of those events and some events hosted by Department Of Computer Science.
+We have our own equipments like Clutch for Esport.
+Racket and Bat for their respectively games</p>
+</div>
+<div class="sub">
+<h2>Achievements</h2>
+<p>Our Department had get #1 in 2015 to 2019 and #2 in 2020
+after that from #1 in 2021 to 2023 in Gujarat and 
+#4 in 2017,2018 and #7 in 2019 to 2021 and 
+#1 in India right now from last two years and 
+#17 in All Over Asia and #47 in All Over Country.</p>
+</div>
+<div class="sub">
+<h2>Admission</h2>
+<p>You can get Admission in Our Department from online GU portal or offline also.
+Admission have some several steps till admission. You can visit our department offline.
+You can contact Us on below link and contact numbers</p>
+</div>
+<div class="sub">
+<h2>Contact Us</h2>
+<p>https://google.com
+and Conatct are ...<br>
+6341947100<br>
+9318233286<br>
+3497109472<br>
+7509329582 <br>using these numbers.
+</p>
+</div>
+</div>
+</body>
+</html>

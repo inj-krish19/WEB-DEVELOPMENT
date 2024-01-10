@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <style>
+   div{
+    background-color: pink;
+    height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Example of counter Using Local Storage</h2>
+  <button onclick="counter();">click me</button>
+  <div id="output">See the result here :</div>
+  <script type="text/javascript">
+    function counter() {
+     if(localStorage.hits){
+    localStorage.hits=Number(localStorage.hits)+1;
+   }
+ else{
+  localStorage.hits=1;
+ }
+ document.getElementById('output').innerHTML= "You have clicked counter button for"+ " "+ 
+ localStorage.hits +" "+"times";
+}
+  </script>
+ <p>click the counter button to see the total counts. </p>
+ <p>If you will close the browser still it will not reset. </p>
+</body>
+</html>
+
+ 

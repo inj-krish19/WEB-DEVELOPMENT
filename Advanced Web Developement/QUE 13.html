@@ -1,0 +1,86 @@
+<!--
+
+NAME : SHAH KRISH J.
+ROLL NO. : 47
+SEM : II
+YEAR : 1
+COURSE : COMPUTER SCIENCE
+SUBJECT : FRONT END WEB DEVELOPMENT
+ASSIGNMENT - 2
+
+
+	QUESTION : 13
+	
+Write down JavaScript to add, remove and toggle 
+CSS class and set or returns CSS for selected element.-->
+<html>
+<head>
+<title>
+Question 13 By KRISH 47
+</title>
+<style>
+
+/* defined classes */
+
+.add{
+	height : 200px;
+	width : 200px;
+	border : 4px solid green;
+	background-color : pink;
+	margin : 12px;
+	padding : 5px;
+}
+.toggle{
+	height : 400px;
+	width : 400px;
+	border : 4px solid pink;
+	background-color : lightgreen;
+	margin : 12px;
+	padding : 5px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+</script>
+<script>
+
+// adding in class add
+$(document).ready(function(){
+	$("button#add").click(function(){
+		$("div").addClass("add");
+		$("h2").text("Now This Is Class Add");
+		alert("Class Is Added");
+	});
+});
+
+// removing in class add
+$(document).ready(function(){
+	$("button#remove").click(function(){
+		$("div").removeClass("add");
+		$("div").removeClass("toggle");
+		$("h2").text("Now This Is Class Remove");
+		alert("Class Is Removed");
+	});
+});
+
+// toggling in class add
+$(document).ready(function(){
+	$("button#toggle").click(function(){
+		$("div").toggleClass("toggle");
+		$("h2").text("Now This Is Class Toggled");
+		alert("Class Is Toggled");
+	});
+});
+
+</script>
+</head>
+<body>
+<div>
+<h2>This Is A Normal Class</h2>
+</div>
+<br>
+<button id="add">Add Class</button>
+<button id="remove">Remove Class</button>
+<button id="toggle">Toggle Class</button>
+<h1>* Toggle Will Be Happen Only If Last Class Was Not Remove</h1>
+</body>
+</html>

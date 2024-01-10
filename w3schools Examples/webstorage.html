@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <div id="result"></div>
+ <script>
+  if(typeof(Storage)!=="undefined") {
+   document.getElementById("result").innerHTML = "Hey, Your browser supports the Web Storage.";
+  }
+  else{
+document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage";
+  }
+</script>
+</body>
+</html>

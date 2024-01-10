@@ -1,0 +1,68 @@
+<!--
+
+NAME : SHAH KRISH J.
+ROLL NO. : 47
+SEM : II
+YEAR : 1
+COURSE : COMPUTER SCIENCE
+SUBJECT : FRONT END WEB DEVELOPMENT
+ASSIGNMENT - 2
+
+
+	QUESTION : 3
+	
+Write down a JavaScript to check the variable scope inside 
+and outside of the block with var, let and const keyword.
+-->
+
+<html>
+<head>
+<style>
+</style>
+<script>
+/* 	var scope*/
+var i;
+i= 2;
+document.write("Outside Block Var : " +i + "<br>");
+if(i>0)
+{
+	var i = 19;
+	document.write("Inside Block Var : " + i + "<br>");
+}
+document.write("Outside Block Var : " +i + "<br><br>");
+
+/*	let scope*/
+
+let j;
+j = 2;
+document.write("Outside Block  Let : " +j + "<br>");
+if(i>0)
+{
+	let j = 19;
+	document.write("Inside Block Let : " + j + "<br>");
+}
+document.write("Outside Block  Let : " +j + "<br><br>");
+
+/*	const scope*/
+
+const k =2;
+document.write("Outside Block Constant : " +k + "<br>");
+if(i>0)
+{
+	document.write("Inside Block Constant : " +k + "<br>");
+	//k=19;	no reinitialization THROWS ERROR
+	k = 19;
+	document.write("Inside Block Constant : " +k + "<br>");/**/
+	/*/if we fo like this then new constant in if conditon creates
+	const k=19;
+	document.write("Inside Block Constant : " +k + "<br>");/**/
+}
+document.write("Outside Block Constant : " +k + "<br><br>");
+</script>
+</head>
+<title>
+Question 3 By KRISH 47
+</title>
+<body>
+</body>
+</html>

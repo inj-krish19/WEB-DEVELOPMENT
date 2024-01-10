@@ -1,0 +1,100 @@
+<!--
+
+NAME : SHAH KRISH J.
+ROLL NO. : 47
+SEM : II
+YEAR : 1
+COURSE : COMPUTER SCIENCE
+SUBJECT : FRONT END WEB DEVELOPMENT
+ASSIGNMENT - 2
+
+
+	QUESTION : 12
+	
+Write down JavaScript to manipulate DOM by using 
+setter and getter methods of the element’s text, 
+html, and value based on listening mouse and key events -->
+<html>
+<head>
+<title>
+Question 12 By KRISH 47
+</title>
+<style>
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+</script>
+<script>
+
+// getter methods
+
+$(document).ready(function(){
+		// double click event
+	$("button").dblclick(function(){
+		alert($("#sh").text());
+		$("p").css("color","red");
+	});
+});
+
+$(document).ready(function(){
+		// mouse enter event
+	$("p").mouseenter(function(){
+		$("p").css({
+		 "color":"blue",
+		 "font-size":"20"
+		 });
+		alert("Your Name Is : " + $("#name").val());
+	});
+});
+
+$(document).ready(function(){
+		// key up & down event
+	$("#num").keyup(function(){
+		$("body").css("background-color","#a11692");
+		alert("Source Code : " + $("html").html());
+	});
+	$("#num").keydown(function(){
+		$("body").css("background-color","#8ff7a7");
+	});
+});
+
+// setter methods
+
+$(document).ready(function(){
+		// double click event
+	$("button").dblclick(function(){
+		$("button").text("Now It Is Useless");
+	});
+});
+
+$(document).ready(function(){
+		// click event
+	$("h5").click(function(){
+		alert($("#hid").val());
+	});
+});
+
+$(document).ready(function(){
+		// key press event
+	$("button").keypress(function(){
+		alert($("p.a").html());
+	});
+});
+
+</script>
+</head>
+<body>
+<label for="name">Name : </label>
+<input type="text" id="name"><br><br>
+<input type="text" id="hid" value="Are You Happy Now" style="display : none;">
+<p id="sh" style="display : none;">Paragraph Color Changed</p>
+<p class="a" style="display : none;">HAPPY HAPPY HAPPY</p>
+<button>Double Click to Change Font Color</button>
+<p>Enter Pointer on Paragraph to Get Your Name</p>
+<br>
+<label for="num">Number : </label>
+<input type="number" id="num" value="0"><br>
+<h5>Do Keyup or Keydown (i.e Incerasing Decreasing using key)change body color also can watch source code
+<br>Press On Button And Be Happy when it is used one time</h5>
+<br><br>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!--
+
+NAME : SHAH KRISH J.
+ROLL NO. : 47
+SEM : II
+YEAR : 1
+COURSE : COMPUTER SCIENCE
+SUBJECT : FRONT END WEB DEVELOPMENT
+ASSIGNMENT - 2
+
+
+	QUESTION : 2
+
+Write down a JavaScript to manage numbers and strings using array. 
+Operations to be performed are: 
+a) Creation and Initialization of Array, 
+b) Append an element in array,
+c) Delete an Element,
+d) Sort data in descending order,
+e) Iterate an array using for loop, for of loop, and for each method;
+f) Display number in console log, document write, and innerhtml, and document element,
+g) when element is added and deleted, alert the message. 
+h) Validate data using typeof operator. 
+i) write down custom logic to sort the numbers. 
+j) create different js function for different operations. 
+[Use textbox and button to manage addition and deletion operation].
+-->
+<html>
+<title>
+Question 2 By KRISH 47
+</title>
+<head>
+<style>
+</style>
+</head>
+<body>
+<label for="email">Email :</label>
+<input type="text" id="email" name="email"><br><br>
+<label for="password">Password :</label>
+<input type="password" id="password" name="pass"><br><br>
+<input type="button" value="Additon" onclick=addition();>
+<input type="button" value="Deletion" onclick=deletion();>
+<br>
+<p id="demo"></p>
+<h2>After Click On Any Button They Will Be Removed</h2>
+<script>
+// creation and initialization (A)
+
+const numbers = [12,54,25,47,1,5];
+
+document.write("<h2>Displaying Numbers : </h2>");
+
+for (let i=0;i<numbers.length;i++)
+{
+	document.write(numbers[i] + "	");
+}
+document.write("<br>");
+
+// appending (adding) (B)
+
+x = 0;
+function addition()
+{
+	document.write("<br><br>Added One Number : 37<br>");
+	numbers.push(37);
+	alert("Element Is Added");
+	document.write("<br>Displaying Numbers After Appendation : <br><br>");
+
+	for(let i=0;i<numbers.length;i++)
+	{
+		document.write(numbers[i] + "	");
+	}
+	document.write("<br>");
+	document.write("<br>");
+	if(x == 0)
+	{
+		document.write("<button onclick=deletion();>" + "Deletion" +"</button>");
+		x = 1;
+	}
+}
+
+// deletion (C)
+
+x=0;
+function deletion()
+{
+	numbers.pop(5);
+	document.write("<br><br>"+"5 is Removed" + "<br>");
+	alert("Element Is Deleted");
+	document.write("<br>Displaying Numbers After Deletion : <br><br>");
+
+	for(let i=0;i<numbers.length;i++)
+	{
+		document.write(numbers[i] + "	");
+	}
+	document.write("<br>");
+	document.write("<br>");
+	if(x == 0)
+	{
+		document.write("<button onclick=addition();>" + "Appendation" +"</button>");
+		x = 1;
+	}
+}
+
+// Descending Sort (D)
+
+descending();
+function descending()
+{
+	numbers.sort();
+	document.write("<h2>" + "Descending Sort Is : "+"</h2>");
+	numbers.reverse();
+	document.write(numbers);
+}
+
+// Using For Loop,For Out Loop and For Each method (E)
+
+show();
+function show()
+{
+	document.write("<br><br><h2>Displaying Values Using All Loops </h2>");
+	//for
+	numbers.sort();
+	document.write("For Loop <br>");
+	for(let i=0;i<numbers.length;i++)
+	{
+		document.write(numbers[i] + "	");
+	}
+	
+	// for of 
+	document.write("<br><br>For Of Loop <br>");
+	for(let i in numbers)
+	{
+		document.write(numbers[i] + "	");
+	}
+	
+	// for each 
+	document.write("<br><br>For Each Method <br>");
+	numbers.forEach(each);
+	function each(value)
+	{
+		document.write(value+"	");
+	}
+}
+
+// Displaying In Methods (F)
+
+display();
+function display()
+{
+	document.write("<br><br><h2>Displaying Values Using All Methods </h2>");
+	document.write("Using Document Write Method : ");
+	console.log("Using Console Method : ");
+	for(let i=0;i<numbers.length;i++)
+	{
+		document.write(numbers[i] + "	");
+		console.log(numbers[i]);
+	}
+	document.getElementById("demo").innerHTML = "<h2>Using Document Get Id Method </h2>"+numbers;
+}
+
+// data validation (H)
+
+document.write("<br><h2>Type Of Number Is "+ typeof numbers+"</h2>");
+
+// sort (I)
+soort();
+function soort()
+{104
+	for(i=0;i<numbers.length;i++)
+	{
+		min = 999;
+		for(j=i;j<numbers.length;j++)
+		{
+			if(min > numbers[j])
+			{
+				min = numbers[j];
+				t = j;
+			}
+		}
+		numbers[t] = numbers[i];
+		numbers[i] = min ;
+		min = numbers[t];
+	}
+	document.write("<h2>Sorted Array Is : </h2>");
+	for(i=0;i<numbers.length;i++)
+	{
+		document.write(numbers[i]+"	");
+	}
+}
+</script>
+<!--a : 37, b : 47, c : 70, d : 95, e : 104, f : 134, g : 54,77 , h : 150, i : 154,j : at 50,73,96,107,128,137,156. -->
+</body>
+</html>

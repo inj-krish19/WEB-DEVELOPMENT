@@ -1,0 +1,101 @@
+<!--
+
+NAME : SHAH KRISH J.
+ROLL NO. : 47
+SEM : II
+YEAR : 1
+COURSE : COMPUTER SCIENCE
+SUBJECT : FRONT END WEB DEVELOPMENT
+ASSIGNMENT - 2
+
+
+	QUESTION : 5
+	
+Write down a style on HTML div, p, label, and text elements to 
+explore the box model of CSS with user interface based on the properties 
+such as width, margin, padding, border, RGBA, background family, border family, 
+outline, outline-offset, resize, overflow, and properties for the text effects.
+Display the total height and width of component.
+	
+-->
+
+<html>
+<head>
+<title>
+Question 5 By KRISH 47
+</title>
+<style>
+
+/*	Giving Style To Outer Div */
+
+.big
+{
+	height:600px;
+	width : 600px;
+	margin : 10px;
+	padding : 20px;
+	border : 5px dashed red;
+	background : url("https://picsum.photos/650") no-repeat;
+	z-index : -1;
+	position : static;
+	resize: none;
+    overflow: auto;
+}
+
+/*	Giving Style To Inner Div*/
+
+.sub
+{
+	margin : 20px;
+	padding : 20px;
+	border : 5px solid blue;
+	background : rgba(204, 205, 221, 1);
+	outline : 1px solid white;
+	outline-offset : 20px;
+	text-overflow : ellipsis; 
+	word-wrap : initial;
+	word-break : keep-all;
+	writing-mode : horizontal-tb;
+}
+
+/*	Using RGBA Property In Background Colour*/
+
+body
+{
+	background-color : rgba(199,184,234,1);
+}
+.para
+{
+	font-size : 21;
+}
+</style>
+<script>
+</script>
+</head>
+<body>
+<div class="big">
+<label for="email">Email : </label>
+<input type ="email" id="email" required><br><br>
+
+<label for="pass">Password : </label>
+<input type ="password" id="pass"  required><br><br>
+
+<input type="button" value="Submit"><br><br><br>
+
+<div class="sub">
+<h2>Using Styles</h2>
+<p class="para">Today 's date is 10 May 2023 and the time happens nearly 9:30 AM and Paragraph 1</p>
+<p class="para">This Is Paragraph 2</p>
+<p class="para">This Is Paragraph 3</p>
+<p class="para">This Is Paragraph 4</p>
+<p class="para">This Is Paragraph 5</p>
+<p class="para">This Is Paragraph 6</p>
+<p class="para">This Is Paragraph 7</p>
+</div>
+</div>
+<h4>Width of an element = left border width + left padding width + content width + right padding width + right border width</h4>
+<h3>Width of an element = 20 + 20 + 493.600 + 20 + 20 =  573.600 </h3>
+<h4>Height of an element = top border height + top padding height + content height + bottom padding height + bottom border height</h4>
+<h3>Height of an element = 20 + 20 + 407.112 + 20 + 20 =  487.112 </h3>
+</body>
+</html>

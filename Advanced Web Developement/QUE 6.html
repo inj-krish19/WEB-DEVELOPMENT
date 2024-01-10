@@ -1,0 +1,141 @@
+<!--
+
+NAME : SHAH KRISH J.
+ROLL NO. : 47
+SEM : II
+YEAR : 1
+COURSE : COMPUTER SCIENCE
+SUBJECT : FRONT END WEB DEVELOPMENT
+ASSIGNMENT - 2
+
+
+	QUESTION : 6
+
+Write down a style to apply transformation on div element 
+by translating,rotating, scaling, and skew 
+with shorthand matrix and without shorthand methods.
+
+-->
+<html>
+<head>
+<title>
+Question 6 By KRISH 47
+</title>
+<style>
+
+/*	ORIGINAL DIV*/
+
+.original
+{
+	margin : 20px;
+	padding : 10px;
+	height : 300px;
+	width : 300px;
+	background-color : #848586;
+	border : 5px dashed lightgreen;
+	color : #280003;
+	font-family : Script MT Bold;
+	font-size : 20;
+}
+
+/*	GIVING STYLE TO ALL OPERATIONS ' S CLASS*/
+
+.operations
+{
+	padding : 10px;
+	height : 200px;
+	width : 200px;
+	background-color : #310a31;
+	border : 3px dashed lightgreen;
+	color : #afece7;
+	font-family : Arial;
+	font-size : 20;
+	overflow : hidden;
+	text-overflow: ellipsis;
+}
+
+/*	Providing Acoordingly Transformation CSS */
+
+#translate
+{
+	margin : 20 0 0 0px;
+	transform : translate(180deg);
+}
+#rotate
+{
+	margin : -225 20 0px 300px;
+	transform : rotate(40deg);
+}
+#scale
+{
+	margin : -225 20 0px 650px;
+	transform : scale(1.47);
+}
+#skew
+{
+	margin : -225 20 0px 1050px;
+	transform : skew(47deg);
+}
+@keyframes example
+{
+	0%{background-color : pink; transform: matrix(1,0,0,1,1,0);}
+	25%{background-color : orange; transform : matrix(0,1,0.7,0,0.9,0.1);}
+	50%{background-color : green; transform: matrix(1,0,0,1.4,1,0);}
+	75%{background-color : blue; transform: matrix(1,0,0.9,1,0.6,1);}
+	100%{background-color : black; transform: matrix(1,0.1,0.5,1,0.9,0);}
+}
+#matrix
+{
+	height : 400px;
+	width : 400px;
+	animation : example 12s infinite;
+	/*transform : matrix(1,0.1,0.5,1,0.9,0);*/
+	margin : 47px;
+}
+</style>
+<script>
+</script>
+</head>
+<body>
+<div class="original">
+<h2>ORIGINAL DIV</h2>
+<p>This is a Paragraph and here we will gonna doing 
+some operations like translate,rotete,scaling,skewing this 
+all with their respectively property and also with shorthand property matrix also.</p>
+</div><br>
+<div id="translate" class="operations">
+<h2>ORIGINAL DIV</h2>
+<p>This is a Paragraph and here we will gonna doing 
+operations of translate with their respectively property.</p>
+</div>
+<div id="rotate" class="operations">
+<h2>ROTATE DIV</h2>
+<p>This is a Paragraph and here we will gonna doing 
+operations of roatate with their respectively property.</p>
+</div>
+<div id="scale" class="operations">
+<h2>SCALE DIV</h2>
+<p>This is a Paragraph and here we will gonna doing 
+operations of scale with their respectively property.</p>
+</div>
+<div id="skew" class="operations">
+<h2>SKEW DIV</h2>
+<p>This is a Paragraph and here we will gonna doing 
+operations of skew with their respectively property.</p>
+</div>
+<br><br>
+<div id="matrix" class="operations">
+<h2>WITH MATRIX ABOVE ALL OPERATIONS</h2>
+<p>This is a Paragraph and here we will gonna doing 
+all operations with matrix property.<br><br>
+*At All 3 second properties are changed<br>
+ 0s : translate <br> 3s : rotate <br>
+ 6s : scale<br> 9s : skew<br> 12s : End<br>
+</p>
+</div>
+<br><br><br>
+<h3>*At All 3 second properties are changed<br>
+ 0s : translate <br> 3s : rotate <br>
+ 6s : scale<br> 9s : skew<br> 12s : End<br></h3>
+</body>
+</html>

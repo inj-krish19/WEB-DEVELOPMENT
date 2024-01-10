@@ -1,0 +1,276 @@
+<!--
+
+NAME : SHAH KRISH J.
+ROLL NO. : 47
+SEM : II
+YEAR : 1
+COURSE : COMPUTER SCIENCE
+SUBJECT : FRONT END WEB DEVELOPMENT
+ASSIGNMENT - 2
+
+
+	QUESTION : 1
+
+Write down a JavaScript to manage book object. Operations to be performed are:
+	a) Create an object,
+	b) Add extra property in object, 
+	c)Create full Name as object method to concatenate author’s
+	first name and last name to create author’s full name,
+	d) Iterate an object through for in loop, access the properties 
+	and display its property and value both in console and in p element. 
+	e) Display list of books publisher-wise differently using conditional statements.
+	f) validate book object values. 
+	g) create different js function for different operations. 
+	[Utilize HTML Form to enter data and submit]
+-->
+<html>
+<head>
+<style>
+</style>
+</head>
+<title>
+Question 1 By KRISH 47
+</title>
+<body>
+<label for="email">Email : </label>
+<input type ="email" id="email" required><br><br>
+
+<label for="pass">Password : </label>
+<input type ="password" id="pass"  required><br><br>
+
+<label for="text">Name : </label>
+<input type ="text" id="text" required><br><br>
+
+<label for="no">Number : </label>
+<input type ="number" id="no" required><br><br>
+
+<label for="date">Date : </label>
+<input type ="date" id="date" required><br><br>
+
+<label for="time">Time : </label>
+<input type ="time" id="time" required><br><br>
+
+<label for="radio">Radio : </label><br>
+<input type ="radio" id="dt" name="a" value="A">
+<label for="dt">Male</label><br>
+<input type ="radio" id="dt2" name="a" value="B">
+<label for="dt2">Female</label><br><br>
+
+<label for="check">Checkbox : </label><br>
+<input type ="checkbox" id="ct" name="a" value="A">
+<label for="ct">Car</label><br>
+<input type ="checkbox" id="ct2" name="a" value="B">
+<label for="ct2">Bike</label><br><br>
+
+<label for="meter">Meter : </label>
+<input type ="range" id="meter" min="0" max="100" value="47" required><br><br>
+
+<label for="ta">TextArea : </label>
+<input type ="textarea" id="ta" required><br><br>
+
+<label for="email">Colour : </label>
+<input type ="color" id="email" required><br><br>
+
+<label for="file">File : </label>
+<input type ="file" id="file" required><br><br>
+
+<label for="reset">Reset : </label>
+<input type ="reset" id="reset" required><br><br>
+
+<input value="Submit" type ="button" id="button"><br><br>
+<h1>
+<p id="demo"></p>
+<p id="dem"></p>
+</h1>
+<script>
+// CREATION (A)
+
+// LIST (E) 
+
+const book =[ {
+ 	bookTitle : "Programming In C",
+	bookFirstNameAuthor : "E Balagurusamy",
+	bookLastNameAuthor : "KRISH SHAH",
+	bookPages : 300,
+	bookPublisher : "Mc Graw Hill",
+	bookEdition : "9th",
+	bookLaunchYear : 2017,
+	// ADDING PROPERTY BY METHOD & CONCATINATION (C)
+	bookAuthorFullname : function abc() 
+	{
+		return book.bookFirstNameAuthor + " and " + book.bookLastNameAuthor;
+	},
+	bookFullname : function bcd() 
+	{
+		return book.bookTitle + " By " + book.bookFirstNameAuthor;
+	}
+},
+{
+ 	bookTitle : "Problem Solving For Programming",
+	bookFirstNameAuthor : "E Balagurusamy",
+	bookLastNameAuthor : "RAHIL KOSHTI",
+	bookPages : 240,
+	bookPublisher : "Mc Graw Hill",
+	bookEdition : "1st",
+	bookLaunchYear : 2011,
+	// ADDING PROPERTY BY METHOD & CONCATINATION (C)
+	bookAuthorFullname : function abc() 
+	{
+		return book.bookFirstNameAuthor + " and " + book.bookLastNameAuthor;
+	},
+	bookFullname : function bcd() 
+	{
+		return book.bookTitle + " By " + book.bookFirstNameAuthor;
+	}
+},
+{
+ 	bookTitle : "Database Management System",
+	bookFirstNameAuthor : "Ramakrishna Ghelkhe",
+	bookLastNameAuthor : "DHRUV RAPARIYA",
+	bookPages : 1290,
+	bookPublisher : "KG HOUSE",
+	bookEdition : "6th",
+	bookLaunchYear : 2009,
+	// ADDING PROPERTY BY METHOD & CONCATINATION (C)
+	bookAuthorFullname : function abc() 
+	{
+		return book.bookFirstNameAuthor + " and " + book.bookLastNameAuthor;
+	},
+	bookFullname : function bcd() 
+	{
+		return book.bookTitle + " By " + book.bookFirstNameAuthor;
+	}
+}
+]
+
+// ADDING PROPERTY (B)
+
+// FUNCTIONS (G)
+
+adding();
+
+function adding()
+{
+	{
+		book[0]["bookUnits"] = 19;
+		book[1]["bookUnits"] = 12;
+		book[2]["bookUnits"] = 33;
+	}
+}
+	
+// SHOWING VALUES IN CONSOLE & BY <P> (D)
+
+// FUNCTIONS (G)
+
+myFunction();
+
+function myFunction()
+{
+	for(let a=0;a<3;a++)
+	{
+		document.write("<br><h1>"+ "OBJECT "+ a + ":<br></h1>");
+		for(let x in book[a])
+		{
+			console.log(x + "	:	");
+			console.log(book[a][x]+ "<br>");
+			document.write("<p id = property>"+ x +" :");
+			document.write("<b>"+ book[a][x] +"</p></b>");
+		}
+	}
+}
+
+// FUNCTIONS (G)
+
+validation();
+
+function validation()
+{
+	document.write("<br><br><h1>" +" Properties and Values : "+"</h1><br><br>");
+	m = 0;
+	for(let x in book[m])
+	{
+		console.log(x + "	:	");
+		document.write("<b><p id = property>"+ x +" : <br><br></b>");
+		for(let a=0;a<3;a++)
+		{
+			console.log(book[a][x]);
+			document.write("<p>"+ book[a][x] +"</p>");
+		}
+		m++;
+	}
+}
+
+// list of books by publisher-wise using conditional statements (E)
+
+publishers();
+
+function publishers()
+{
+	a = 0;
+	x = 0;
+	document.write("<b>");
+	for(i=0;i<3;i++)
+	{
+		if(book[0].bookPublisher != book[1].bookPublisher && book[0].bookPublisher != book[2].bookPublisher &&
+		book[1].bookPublisher != book[2].bookPublisher && a==0)
+		{
+			document.write("<p>"+ book[0].bookPublisher +" : </p>");
+			document.write("<p>"+ book[0].bookTitle +"</p>");
+			document.write("<p>"+ book[1].bookPublisher +" : </p>");
+			document.write("<p>"+ book[1].bookTitle + "</p>");
+			document.write("<p>"+ book[2].bookPublisher +" : </p>");
+			document.write("<p>"+ book[2].bookTitle +"</p>");
+			i = 5;
+			break;
+		}
+		else if(book[0].bookPublisher == book[1].bookPublisher && book[1].bookPublisher == book[2].bookPublisher && a==0)
+		{
+			document.write("<p>"+ book[i].bookPublisher +" : </p>");
+			document.write("<p>"+ book[0].bookTitle +" , ");
+			document.write(book[1].bookTitle);
+			document.write(book[2].bookTitle +"</p>");
+			i = 5;
+			break;
+		}
+		else if(book[0].bookPublisher == book[1].bookPublisher && a == 0)
+		{
+			document.write("<p>"+ book[0].bookPublisher +" : </p>");
+			document.write("<p>"+ book[0].bookTitle +" , ");
+			document.write(book[1].bookTitle +"</p>");
+			a = 2;
+		}
+		else if(book[0].bookPublisher == book[2].bookPublisher & a == 0)
+		{
+			document.write("<p>"+ book[0].bookPublisher +" : </p>");
+			document.write("<p>"+ book[0].bookTitle +" , ");
+			document.write(book[2].bookTitle +"</p>");
+			a = 1;
+		}
+		else if(book[1].bookPublisher == book[2].bookPublisher && a == 0)
+		{
+			document.write("<p>"+ book[1].bookPublisher +" : </p>");
+			document.write("<p>"+ book[1].bookTitle +" , ");
+			document.write(book[2].bookTitle +"</p>");
+			a = 0;
+		}
+		else
+		{
+			document.write(book[a].bookPublisher +"</p>");
+			document.write(book[a].bookTitle +"</p>");
+			i = 5;
+			break;
+		}
+	}
+	document.write("</b>");
+}
+
+// validation (F)
+
+document.write("<h2>Book Is An "+typeof book+"</h2>")
+/*document.getElementById("demo").innerHTML = book.bookAuthorFullname();
+document.getElementById("dem").innerHTML = book.bookFullname();*/
+
+</script>
+<!--	list of all by line number a : 76, b : 136, c : 88,106,124 , d : 151, e : 193, f : 257, g : at 140,155,176,195.	-->
+</body>
+</html>

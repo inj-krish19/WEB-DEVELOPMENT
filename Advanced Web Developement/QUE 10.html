@@ -1,0 +1,135 @@
+<!--
+
+NAME : SHAH KRISH J.
+ROLL NO. : 47
+SEM : II
+YEAR : 1
+COURSE : COMPUTER SCIENCE
+SUBJECT : FRONT END WEB DEVELOPMENT
+ASSIGNMENT - 2
+
+
+	QUESTION : 10
+	
+Write down jQuery to hide html element through the different selectors 
+such as element name, id, first element, attributes, even elements, odd 
+elements, and class on HIDE - button click.	-->
+<html>
+<head>
+<title>
+Question 10 By KRISH 47
+</title>
+<style>
+#unick,h6{
+	color : red;
+}
+.para{
+	color : blue;
+}
+h2{
+	color:green;
+}
+#recover{
+	display : none;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+</script>
+<script>
+
+// hiding html element by element p
+
+$(document).ready(function(){
+	$("p").click(function(){
+		$("html").hide(function(){
+			alert("WEBPAGE IS CLEAR NOW");
+		});
+	});
+});
+
+// hiding all h2 using an id one
+
+$(document).ready(function(){
+	$("#one").click(function(){
+		$("h2").hide();
+	});
+});
+
+// hiding class para using button
+
+$(document).ready(function(){
+	$("input").click(function(){
+		$(".para").hide();
+	});
+});
+
+// hiding button using para class
+
+$(document).ready(function(){
+	$(".para").click(function(){
+		$("input").hide();
+	});
+});
+
+// hiding blank space using first paragraph
+ 
+$(document).ready(function(){
+	$("h1:first").click(function(){
+		$("br").hide();
+	});
+});
+
+// hiding even list using odd list 
+
+$(document).ready(function(){
+	$("ul li:odd").click(function(){
+		$("ul li:even").hide();
+	});
+});
+
+// hiding odd list using even list 
+
+$(document).ready(function(){
+	$("ul li:even").click(function(){
+		$("ul li:odd").hide();
+	});
+});
+
+// using attribute red removing style
+
+$(document).ready(function(){
+	$("h6,#unick").click(function(){
+		$("h6").css	("color", "black");
+		$("p").css	("color", "black");
+		$("h2").css	("color", "black");
+	});
+});
+</script>
+</head>
+<body>
+<h1>This Is First H1 that will hide all blank lines</h1>
+
+
+<h2>*Click On Below Any One Paragraph If you want to Hide all HTML elements</h2> 
+<p>This Is First Paragraph that can hide also all html content</p>
+<p>This is Second Paragraph that can hide also all html content</p>
+<p id="unick">This Paragraph Have Id Name As Unick</p>
+<p class="para">This is a Paragraph 1 of Class Name As Para</p>
+<p class="para">This is a Paragraph 2 of Class Name As Para</p>
+<br>
+<h2 id="one">Click On This H2 Then It Will be Hide All H2</h2>
+<br>
+<input type="button" value="Hide Para Class">
+<h3>Cartoons : <br><br>
+If You Touch On Even List then it will hide Odd List<br>
+If You Touch On Odd List then it will hide Even List</h3>
+<ul>
+<li>Ben 10</li>
+<li>Tom & Jerry</li>
+<li>Shinchan</li>
+<li>Doremon</li>
+<li>Power Rangers</li>
+</ul>
+<h6>Reset all HTML Style</h6>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!--
+
+NAME : SHAH KRISH J.
+ROLL NO. : 47
+SEM : II
+YEAR : 1
+COURSE : COMPUTER SCIENCE
+SUBJECT : FRONT END WEB DEVELOPMENT
+ASSIGNMENT - 2
+
+
+	QUESTION : 7
+	
+Write down a style to animate any html element 
+i.e. image, or div or any other object.
+Apply animation by key frame. 
+Configure various properties 
+such as duration, direction, delay and 
+so on to identify the different animation impacts.	-->
+	
+<html>
+<head>
+<title>
+Question 7 By KRISH 47
+</title>
+<style>
+
+/*	Animation To Body */
+
+@keyframes example
+{
+	0%{background-color : pink;}
+	10%{background-color : blue;}
+	20%{background-color : yellow;}
+	30%{background-color : green;}
+	40%{background-color : red;}
+	50%{background-color : violet;}
+	60%{background-color : grey;}
+	70%{background-color : black;}
+	80%{background-color : orange;}
+	90%{background-color : #cccddd;}
+	100%{background-color : white;}
+}
+body{
+	animation : example 11s ease 0s infinite;
+}
+
+/*	Animation To Image */
+
+@keyframes exam
+{
+	10%{transform:skew(100deg);}
+	25%{transform:scale(0.2);}
+	50%{transform:;rotate(180deg)}
+	75%{transform:rotate(-76deg);}
+	100%{transform:rotate(-200deg);}
+}
+.ani{
+	animation : exam 10s infinite;
+}
+
+/*	Animation To Simple DIV */
+
+@keyframes examp
+{
+	0%{margin : 0px; background-color:#cccddd;}
+	25%{margin:0 0 0 0px; background-color:green;}
+	50%{margin:0 0 0 1250px; background-color:blue;}
+	75%{margin:525 0 0 1250px; background-color:pink;}
+	90%{margin:525 0 0 0px; background-color:black;}
+	100%{margin : 0px; background-color:#cccddd;}
+}
+div{
+	height:200px;
+	width:200px;
+	animation : examp 2s infinite;
+}
+</style>
+<script>
+</script>
+</head>
+<body>
+<img class="ani" src="https://picsum.photos/400"></img>
+<br><br><br><br><br><br><br>
+<div>
+</div>
+</body>
+</html>
